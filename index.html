@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>mainpage</title>
+    <link rel="stylesheet" href="css/semantic.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="custom.css" media="screen" title="no title" charset="utf-8">
+    <script type="text/javascript" src="js/vue1.js"></script>
+
+
+  </head>
+  <body id="app">
+    <div class="ui vertical basic segment masthead">"
+          <div class="ui inverted text menu">
+              <div class="ui image">
+                  <img src="images/logo.png" alt="" />
+              </div>
+
+              <div class="right menu">
+                  <div class="item">
+                    <button type="button" name="button" class="ui inverted circular button">mark</button>
+                  </div>
+              </div>
+          </div>
+
+          <h1 class="ui inverted center aligned header slogan">
+                   2014 新媒体 2 班同学录
+              <p class="inverted sub header">
+                  厦门理工学院
+              </p>
+          </h1>
+    </div>
+
+
+      <div class="ui vertical basic segment recommended">
+                <h1 class="ui center aligned header">同学作品</h1>
+
+      <div class="ui three column grid container">
+        <div v-for="student in students" class="column" >
+                <a href="{{student.website}}"><div class="ui inverted segment card-view" style="background: url('images/fengmian/{{student.studentnum}}.jpg');background-size: cover;background-repeat: no-repeat;">
+                    <h3 class="ui header title">{{student.name}}的主页</h3>
+                    <h4 class="ui header">{{student.name}}</h4>
+                    <div class="ui divider"></div>
+
+                    <span>
+                        学号{{student.studentnum}}
+                    </span>
+                </div>
+            </div></a>
+      </div>
+
+
+
+    </div>
+
+
+
+
+    <div class="ui inverted red basic segment people-say">
+            <h3 class="ui center aligned header">新媒体二班班级活动</h3>
+            <div class="ui grid">
+                <div class="four wide column">
+                    <a href="An-Quan.html"><div class="ui circular inverted segment"style="  background: url('images/照片/安全班会/QQ截图20141120231252.png');  background-size: cover;
+                      background-repeat: no-repeat;
+                      width: 120px;
+                      height: 120px;
+                      position: absolute;
+                      left: 50%;
+                      transform: translate(-50%,-50%);">
+                        <i class="icon red inverted circular star"></i>
+                        <h4 class="ui inverted header">
+                             安全班会
+                            <p class="sub header">
+                             大一上学期
+                            </p>
+                        </h4>
+                    </div></a>
+                </div>
+
+                <div class="four wide column">
+                    <a href="Bian-Fei.html"><div class="ui circular inverted segment"style="  background: url('images/照片/变废为宝/DSC_0006.JPG');  background-size: cover;
+                      background-repeat: no-repeat;
+                      width: 120px;
+                      height: 120px;
+                      position: absolute;
+                      left: 50%;
+                      transform: translate(-50%,-50%);">
+                        <i class="icon red inverted circular star"></i>
+                        <h4 class="ui inverted header">
+                            变废为宝
+                            <p class="sub header">
+                            大二下学期
+                            </p>
+                        </h4>
+                    </div></a>
+                </div>
+
+
+                <div class="four wide column">
+                  <a href="Xin-Sheng.html"><div class="ui circular inverted segment"style="  background: url('images/照片/旅游合影/IMG_1528.JPG');  background-size: cover;
+                    background-repeat: no-repeat;
+                    width: 120px;
+                    height: 120px;
+                    position: absolute;
+                    left: 50%;
+                    transform: translate(-50%,-50%);">
+                      <i class="icon red inverted circular star"></i>
+                      <h4 class="ui inverted header">
+                           新生见面会
+                          <p class="sub header">
+                         大一上学期
+                          </p>
+                      </h4>
+                  </div></a>
+                </div>
+
+
+                <div class="four wide column">
+                  <a href="He-Ying.html"><div class="ui circular inverted segment"style="  background: url('images/照片/新生见面/复件 (2) SAM_1963.JPG');  background-size: cover;
+                    background-repeat: no-repeat;
+                    width: 120px;
+                    height: 120px;
+                    position: absolute;
+                    left: 50%;
+                    transform: translate(-50%,-50%);">
+                      <i class="icon red inverted circular star"></i>
+                      <h4 class="ui inverted header">
+                           合影
+                          <p class="sub header">
+                            大三下学期
+                          </p>
+                      </h4>
+                  </div></a>
+                </div>
+
+
+            </div>
+
+
+
+    </div>
+  </body>
+  <script type="text/javascript">
+  var vm = new Vue({
+             el:"#app",
+             data:{
+                 students:[
+                        {"studentnum":"1421172208","name":"陈宇强","website":"https://weilan297.github.io"},
+                        {"studentnum":"1421172214","name":"黄大永","website":"https://BetterOffYoo.github.io"},
+                        {"studentnum":"1421172256","name":"曾彦麒","website":"https://xm11410.github.io/4.html"},
+                        {"studentnum":"1421172245","name":"魏敏珊","website":"https://xm11410.github.io/3.html"},
+                        {"studentnum":"1421172211","name":"郭白雪","website":"https://shupian.github.io/index.html"},
+                        {"studentnum":"1421172251","name":"薛云鹭","website":"https://xueyunlu.github.io/web/index2.html"},
+                        {"studentnum":"1421172254","name":"俞季青","website":"https://yujiqing.github.io/"},
+                        {"studentnum":"1421172223","name":"林宽","website":"https://fairycastle.github.io/index.html"},
+                        {"studentnum":"1421172207","name":"陈昕煜","website":"https://cxy23456.github.io/page/index.html"},
+                        {"studentnum":"1421172230","name":"刘真真","website":"https://lzi81904.github.io/zz/text.html"},
+                        {"studentnum":"1421172252","name":"颜祝琼","website":"https://YANZHUQIONG.github.io/52.html"},
+                        {"studentnum":"1421172236","name":"施凯鑫","website":"https://shikaixi.github.io"},
+                        {"studentnum":"1421172227","name":"林垚","website":"https://laderlin.github.io/"},
+                        {"studentnum":"1421172219","name":"乐来桂","website":"https://llesweag.github.io/index.html"},
+                        {"studentnum":"1421172228","name":"林圆","website":"https://linyuan66.github.io/"},
+                        {"studentnum":"1421172253","name":"杨娟娟","website":"https://syjj.github.io/1421172253杨娟娟/index.html"},
+                        {"studentnum":"1421172233","name":"罗其生","website":"https://luoqisheng66.github.io/index.html"},
+                        {"studentnum":"1421172231","name":"陆靖","website":"https://linyuan66.github.io/lujing"},
+                        {"studentnum":"1421172239","name":"苏嘉琳","website":"https://sujialin6.github.io/index.html"},
+                        {"studentnum":"1421172258","name":"张均","website":"https://ddxz.github.io/wy2/izum.html"},
+                        {"studentnum":"1421172232","name":"吕雄威","website":"https://weilan297.github.io/lvxiongwei/index.html"},
+                        {"studentnum":"1421172246","name":"魏武豪","website":"https://weiwuhao.github.io/xiaoxueqi.html"},
+                        {"studentnum":"1421172234","name":"邱烽","website":"https://qiufeng66.github.io/"},
+                        {"studentnum":"1421172221","name":"李雅婷","website":"https://HAHAaYA.github.io/21.html"},
+                        {"studentnum":"1421172215","name":"黄婷","website":"https://huangting0823.github.io/index.html"},
+                        {"studentnum":"1421172220","name":"李思娜","website":"https://youyiao.github.io/1.html"},
+                        {"studentnum":"1421172257","name":"詹子阳","website":"https://zhanziy.github.io/57.html"},
+                        {"studentnum":"1421172260","name":"赵清芳","website":"https://zhaoqingfang.github.io/index.html"},
+                        {"studentnum":"1421172238","name":"施晓雯","website":"https://shixiaowena.github.io/1-8.html"},
+                        {"studentnum":"1421172261","name":"郑智拼","website":"https://zhengzhipin.github.io/html/index.html"},
+                        {"studentnum":"1421172243","name":"王圣鹏","website":"https://1421172243.github.io/bgm/gg.html"},
+                        {"studentnum":"1421172244","name":"王祖洋","website":"https://pocketmon730.github.io/index.html"},
+                        {"studentnum":"1421172259","name":"张礼焌","website":"https://ye009.github.io/bloger/firstweb.html"},
+                        {"studentnum":"1421172222","name":"林江峰","website":"https://linjiangfeng.github.io/index.html"},
+                        {"studentnum":"1421172263","name":"周一贤","website":"https://zhouyixian123.github.io/index.html"},
+                        {"studentnum":"1421172249","name":"徐宝庭","website":"https://xubaoting.github.io/index.html"},
+                        {"studentnum":"1421172262","name":"钟志鹏","website":"https://539862536.github.io/index.html"},
+                        {"studentnum":"1421172202","name":"曹超","website":"https://caochaozhaowu.github.io/index.html"},
+                        {"studentnum":"1421172218","name":"简仲贤","website":"https://jrick1995.github.io/index.html "},
+                        {"studentnum":"1421172240","name":"苏哲智","website":"https://ooo314.github.io/daqiuzhang.html"},
+                        {"studentnum":"1421172258","name":"张均","website":"http://ddxz.github.io/wy2/izum.html"},
+                        {"studentnum":"1421172213","name":"黄彬发","website":"https://huangbinfa.github.io/hbfff/hbfff/hbf.HTML"},
+                        {"studentnum":"1421172216","name":"黄旭伟","website":"https://rezilaer.github.io/6frame.html"},
+                        {"studentnum":"1421172205","name":"陈鹭鹏","website":"https://asd77767.github.io/新建文件夹/index.html"},
+                        {"studentnum":"1421172224","name":"林敏","website":"https://Alinmin.github.io"}
+                        ]
+
+
+             }
+         })
+  </script>
+</html>
